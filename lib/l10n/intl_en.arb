@@ -1,0 +1,14 @@
+{
+"@@locale": "en",
+ "searchBar":"flutter developer",
+  "login":"Login",
+  "email":"email",
+  "password":"password",
+  "enterPassword":"password...",
+  "enterEmail":"email...",
+  "repassword":"re-password",
+  "submit":"submit",
+  "forgotPassword":"forgot password",
+  "register":"register",
+  "chooseLang":"select language"
+}

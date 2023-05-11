@@ -1,0 +1,14 @@
+{
+  "@@locale": "fa",
+  "searchBar":"توسعه دهنده فلاتر",
+  "login":"ثبت نام",
+  "email":"ایمیل",
+  "password":"رمز",
+  "enterPassword":"...رمز عبور",
+  "enterEmail":"....ایمیل",
+  "repassword":"تایید رمز",
+  "submit":"ثبت",
+  "forgotPassword":"فراموشی رمز",
+  "register":"بازیابی رمز",
+  "chooseLang":"انتخاب زبان"
+}
