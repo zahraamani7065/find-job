@@ -1,16 +1,17 @@
 import 'package:find_job_app/main.dart';
 import 'package:find_job_app/screens/forgot_password.dart';
 import 'package:find_job_app/screens/home.dart';
+import 'package:find_job_app/screens/main_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../configs/theme_config.dart';
-
 class LoginScreen extends StatefulWidget {
   final Function() toggleThemeMode;
+  final Function(Language) selectedLanguageChane;
 
-  const LoginScreen({super.key, required this.toggleThemeMode});
+  const LoginScreen({super.key, required this.toggleThemeMode, required this.selectedLanguageChane});
+
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
@@ -18,10 +19,18 @@ class LoginScreen extends StatefulWidget {
 bool passEnable = true;
 
 class _LoginScreenState extends State<LoginScreen> {
+  Language _language = Language.en;
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     final mediaQuary = MediaQuery.of(context).size;
+    void _updateSelectiveLanguage(Language language) {
+      widget.selectedLanguageChane(language);
+      setState(() {
+        _language = language;
+      });
+    }
+
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -116,7 +125,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => HomeScreen(toggleThemeMode: widget.toggleThemeMode,
+                        builder: (context) => MainScreen(
+                              toggleThemeMode: widget.toggleThemeMode,
                             )));
                   },
                   child: Container(
@@ -141,7 +151,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   onTap: () {
                     Navigator.of(context)
                         .push(MaterialPageRoute(builder: (context) {
-                      return ForgotPassword();
+                      return ForgotPassword(
+                        toggleThemeMode: widget.toggleThemeMode,
+                      );
                     }));
                   },
                   child: Center(
@@ -153,10 +165,33 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(
                   height: 40,
                 ),
-                Text(
-                  AppLocalizations.of(context)!.chooseLang,
-                  style: textTheme.bodyText2,
-                ),
+                Row(
+                    children: [
+                  Text(
+                    AppLocalizations.of(context)!.chooseLang,
+                    style: textTheme.headline4,
+                  ),
+                  CupertinoSlidingSegmentedControl<Language>(
+                      groupValue: _language,
+                      children: {
+                        Language.en: Text(
+                          AppLocalizations.of(context)!.english,
+                          style: textTheme.headline4,
+                        ),
+                        Language.fa: Text(
+                          AppLocalizations.of(context)!.persian,
+                          style: textTheme.headline4,
+                        ),
+                      },
+
+                      onValueChanged: (value) {
+                        if (value != null) {
+                          _updateSelectiveLanguage(value);
+                        }
+
+
+                      })
+                ]),
               ],
             ),
           ),

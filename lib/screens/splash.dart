@@ -1,11 +1,12 @@
-import 'package:find_job_app/screens/home.dart';
 import 'package:find_job_app/screens/login.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../main.dart';
 
 class SplashScreen extends StatefulWidget {
   final Function() toggleThemeMode;
-  const SplashScreen({super.key, required this.toggleThemeMode});
+  final Function(Language) selectedLanguageChane;
+  const SplashScreen({super.key, required this.toggleThemeMode, required this.selectedLanguageChane});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -14,9 +15,9 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 5)).then((value) => Navigator.of(context)
+    Future.delayed(Duration(seconds: 1)).then((value) => Navigator.of(context)
             .pushReplacement(MaterialPageRoute(builder: (context) {
-          return LoginScreen(toggleThemeMode: widget.toggleThemeMode);
+          return LoginScreen(toggleThemeMode: widget.toggleThemeMode, selectedLanguageChane: widget.selectedLanguageChane,);
         })));
     // TODO: implement initState
     super.initState();
@@ -35,8 +36,8 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Center(
                 child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
+              children: const [
+                Text(
                   'kimta',
                   style: TextStyle(
                     color: Colors.white,
@@ -45,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     decoration: TextDecoration.underline,
                   ),
                 ),
-                const Text(
+                Text(
                   'kerja',
                   style: TextStyle(
                       color: Colors.white,

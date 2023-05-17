@@ -159,6 +159,186 @@ class S {
       args: [],
     );
   }
+
+  /// `persian`
+  String get persian {
+    return Intl.message(
+      'persian',
+      name: 'persian',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `english`
+  String get english {
+    return Intl.message(
+      'english',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `flutter developer`
+  String get flutterDeveloper {
+    return Intl.message(
+      'flutter developer',
+      name: 'flutterDeveloper',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `flutter developer`
+  String get job {
+    return Intl.message(
+      'flutter developer',
+      name: 'job',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `false`
+  String get isSaved {
+    return Intl.message(
+      'false',
+      name: 'isSaved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `zoop`
+  String get companyName {
+    return Intl.message(
+      'zoop',
+      name: 'companyName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tehran,Iran`
+  String get location {
+    return Intl.message(
+      'Tehran,Iran',
+      name: 'location',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `10000&`
+  String get salary {
+    return Intl.message(
+      '10000&',
+      name: 'salary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1 minute ago`
+  String get createJobOffer {
+    return Intl.message(
+      '1 minute ago',
+      name: 'createJobOffer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `10 item found`
+  String get itemsCount {
+    return Intl.message(
+      '10 item found',
+      name: 'itemsCount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `profile`
+  String get profile {
+    return Intl.message(
+      'profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `john Doe`
+  String get name {
+    return Intl.message(
+      'john Doe',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `johndoe20@gmail.com`
+  String get emailAddress {
+    return Intl.message(
+      'johndoe20@gmail.com',
+      name: 'emailAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pengalaman Kerja`
+  String get pengalamankerja {
+    return Intl.message(
+      'Pengalaman Kerja',
+      name: 'pengalamankerja',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in nisl dolor.Donec convallis quam a dignissim pulvinar.Nullam rhoncus elit a nisi elementum, sed luctus tortor porta. Etiam ac pellentesque lorem. `
+  String get bio {
+    return Intl.message(
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in nisl dolor.Donec convallis quam a dignissim pulvinar.Nullam rhoncus elit a nisi elementum, sed luctus tortor porta. Etiam ac pellentesque lorem. ',
+      name: 'bio',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pendidikan`
+  String get pendidikan {
+    return Intl.message(
+      'Pendidikan',
+      name: 'pendidikan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Universitas Kita Ajah`
+  String get university {
+    return Intl.message(
+      'Universitas Kita Ajah',
+      name: 'university',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Agustus 2013 - Desember 2017`
+  String get date {
+    return Intl.message(
+      'Agustus 2013 - Desember 2017',
+      name: 'date',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

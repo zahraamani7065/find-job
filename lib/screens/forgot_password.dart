@@ -3,9 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../configs/theme_config.dart';
-import '../main.dart';
 
 class ForgotPassword extends StatefulWidget {
+  final Function() toggleThemeMode;
+
+  const ForgotPassword({super.key, required this.toggleThemeMode});
   @override
   State<ForgotPassword> createState() => _ForgotPasswordState();
 }

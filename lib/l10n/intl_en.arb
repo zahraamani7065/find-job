@@ -10,5 +10,24 @@
   "submit":"submit",
   "forgotPassword":"forgot password",
   "register":"register",
-  "chooseLang":"select language"
+  "chooseLang":"select language",
+  "persian":"persian",
+  "english":"english",
+  "flutterDeveloper":"flutter developer",
+  "job":"flutter developer",
+  "isSaved":"false",
+  "companyName":"zoop",
+  "location":"Tehran,Iran",
+  "salary":"10000&",
+  "createJobOffer":"1 minute ago",
+  "itemsCount":"10 item found",
+  "profile":"profile",
+  "name":"john Doe",
+  "emailAddress":"johndoe20@gmail.com",
+  "pengalamankerja":"Pengalaman Kerja",
+  "bio":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in nisl dolor.Donec convallis quam a dignissim pulvinar.Nullam rhoncus elit a nisi elementum, sed luctus tortor porta. Etiam ac pellentesque lorem. ",
+  "pendidikan":"Pendidikan",
+  "university":"Universitas Kita Ajah",
+  "date":"Agustus 2013 - Desember 2017"
+
 }
